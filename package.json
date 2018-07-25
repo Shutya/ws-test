@@ -1,0 +1,34 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "cross-env NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline",
+    "build:client": "cross-env NODE_ENV=production webpack",
+    "prod:server": "cross-env NODE_PATH=./server/ NODE_ENV=production nodemon ./server/index.js",
+    "dev:server": "cross-env NODE_PATH=./server/ NODE_ENV=development nodemon --watch ./server ./server/index.js",
+    "start": "npm-run-all -l -p start:client dev:server"
+  },
+  "author": "Shutya",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.9.3",
+    "npm-run-all": "^4.1.3"
+  },
+  "dependencies": {
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  }
+}

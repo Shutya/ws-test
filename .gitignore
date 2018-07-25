@@ -1,0 +1,9 @@
+node_modules
+.idea
+.vscode
+*.swo
+*.log
+*.bundle.js
+*.bundle.js.map
+*.bundle.css
+*.bundle.css.map
